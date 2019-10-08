@@ -6,21 +6,21 @@ import Background from '../../components/Background';
 
 import { Container } from './styles';
 
-const Explore = () => {
+const Trips = () => {
 	return (
 		<Background>
 			<Container>
-				<Text>Explore</Text>
+				<Text>Viagens</Text>
 			</Container>
 		</Background>
 	);
 };
 
-Explore.navigationOptions = {
-	tabBarLabel: 'EXPLORAR',
+Trips.navigationOptions = {
+	tabBarLabel: 'VIAGENS',
 	tabBarIcon: ({ tintColor }) => (
-		<Icon name="search1" size={20} color={tintColor} />
+		<Icon name="enviromento" size={20} color={tintColor} />
 	),
 };
 
-export default Explore;
+export default Trips;

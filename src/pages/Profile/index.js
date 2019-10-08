@@ -6,21 +6,21 @@ import Background from '../../components/Background';
 
 import { Container } from './styles';
 
-const Explore = () => {
+const Profile = () => {
 	return (
 		<Background>
 			<Container>
-				<Text>Explore</Text>
+				<Text>Profile</Text>
 			</Container>
 		</Background>
 	);
 };
 
-Explore.navigationOptions = {
-	tabBarLabel: 'EXPLORAR',
+Profile.navigationOptions = {
+	tabBarLabel: 'PERFIL',
 	tabBarIcon: ({ tintColor }) => (
-		<Icon name="search1" size={20} color={tintColor} />
+		<Icon name="user" size={20} color={tintColor} />
 	),
 };
 
-export default Explore;
+export default Profile;
