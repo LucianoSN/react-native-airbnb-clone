@@ -1,12 +1,13 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 
-// import Routes from './routes';
+import Routes from './routes';
 
-import Explore from './pages/Explore';
 const Index = () => {
 	return (
 		<>
-			<Explore />
+			<StatusBar barStyle="#333" backgroundColor="#fff" />
+			<Routes />
 		</>
 	);
 };
