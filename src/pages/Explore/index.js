@@ -3,16 +3,20 @@ import { Text } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import Background from '../../components/Background';
+import Search from '../../components/Search';
 
 import { Container } from './styles';
 
 const Explore = () => {
 	return (
-		<Background>
-			<Container>
-				<Text>Explore</Text>
-			</Container>
-		</Background>
+		<>
+			<Background>
+				<Container>
+					<Search />
+					<Text>Explore</Text>
+				</Container>
+			</Background>
+		</>
 	);
 };
 
