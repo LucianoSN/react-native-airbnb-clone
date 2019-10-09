@@ -54,11 +54,13 @@ export const CancelLink = styled.TouchableOpacity`
 	justify-content: center;
 
 	color: #999;
-	padding-left: 10px;
-	margin-bottom: 15px;
+	padding: 8px;
+
 	display: ${props => (!props.display ? 'none' : 'flex')};
 `;
 
 export const CancelText = styled.Text`
 	font-size: 16px;
+	margin-bottom: 12px;
+	margin-left: 10px;
 `;
