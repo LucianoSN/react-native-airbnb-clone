@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import Background from '../../components/Background';
 import Search from '../../components/Search';
+import HelpYouFind from '../../components/HelpYouFind';
 
-import { Container } from './styles';
+import { Container, FeedList } from './styles';
 
 const Explore = () => {
 	return (
@@ -13,6 +13,9 @@ const Explore = () => {
 			<Background>
 				<Container>
 					<Search />
+					<FeedList>
+						<HelpYouFind />
+					</FeedList>
 				</Container>
 			</Background>
 		</>
