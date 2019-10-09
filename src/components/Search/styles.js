@@ -1,19 +1,33 @@
 import styled from 'styled-components';
 
 export const Container = styled.View`
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	height: 80px;
 `;
 
-export const Find = styled.View`
+export const FindBox = styled.View`
 	flex-direction: row;
-	padding: 10px 10px 10px 20px;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+`;
+
+export const Find = styled.View`
+	flex-grow: 2;
+	flex-direction: row;
+
+	padding: 10px 15px 10px 15px;
+	margin: 5px 0 20px 0;
+
 	background-color: #fff;
-	margin: 0 20px 20px 20px;
 	border-radius: 4px;
 
 	box-shadow: 0 0 8px rgba(130, 130, 130, 0.3);
+`;
+
+export const Icons = styled.View`
+	display: ${props => (!props.display ? 'none' : 'flex')};
 `;
 
 export const TextFind = styled.TextInput.attrs({
@@ -23,7 +37,21 @@ export const TextFind = styled.TextInput.attrs({
 	fontWeight: 'bold',
 	returnKeyType: 'search',
 })`
-	flex: 1;
 	background-color: #fff;
 	padding-left: 10px;
+	height: 22px;
+`;
+
+export const CancelLink = styled.TouchableOpacity`
+	align-items: center;
+	justify-content: center;
+
+	color: #666;
+	padding-left: 10px;
+	margin-bottom: 15px;
+	display: ${props => (!props.display ? 'none' : 'flex')};
+`;
+
+export const CancelText = styled.Text`
+	font-size: 16px;
 `;
