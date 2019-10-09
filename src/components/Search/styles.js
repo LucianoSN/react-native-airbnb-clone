@@ -33,7 +33,7 @@ export const IconBox = styled.View`
 	display: ${props => (!props.display ? 'none' : 'flex')};
 	align-items: center;
 	justify-content: center;
-	padding: 0 10px;
+	padding-left: 10px;
 `;
 
 export const TextFind = styled.TextInput.attrs({
