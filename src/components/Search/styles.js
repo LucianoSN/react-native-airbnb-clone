@@ -14,11 +14,14 @@ export const FindBox = styled.View`
 `;
 
 export const Find = styled.View`
-	flex-grow: 2;
+	flex: 2;
 	flex-direction: row;
 
-	padding: 10px 15px 10px 15px;
+	align-self: center;
+	width: 100%;
+
 	margin: 5px 0 20px 0;
+	padding: 5px;
 
 	background-color: #fff;
 	border-radius: 4px;
@@ -26,8 +29,11 @@ export const Find = styled.View`
 	box-shadow: 0 0 8px rgba(130, 130, 130, 0.3);
 `;
 
-export const Icons = styled.View`
+export const IconBox = styled.View`
 	display: ${props => (!props.display ? 'none' : 'flex')};
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
 `;
 
 export const TextFind = styled.TextInput.attrs({
@@ -37,16 +43,17 @@ export const TextFind = styled.TextInput.attrs({
 	fontWeight: 'bold',
 	returnKeyType: 'search',
 })`
+	flex: 2;
 	background-color: #fff;
-	padding-left: ${props => (props.showPadding ? 10 : 0)};
-	height: 22px;
+	padding: 0 10px;
+	height: 40px;
 `;
 
 export const CancelLink = styled.TouchableOpacity`
 	align-items: center;
 	justify-content: center;
 
-	color: #666;
+	color: #999;
 	padding-left: 10px;
 	margin-bottom: 15px;
 	display: ${props => (!props.display ? 'none' : 'flex')};

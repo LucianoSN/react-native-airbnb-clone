@@ -6,7 +6,7 @@ import {
 	Container,
 	FindBox,
 	Find,
-	Icons,
+	IconBox,
 	TextFind,
 	CancelLink,
 	CancelText,
@@ -26,11 +26,11 @@ const Search = () => {
 		<Container>
 			<FindBox>
 				<Find>
-					<Icons display={!searchDisplay}>
+					<IconBox display={!searchDisplay}>
 						<Icon name="ios-search" size={20} color="#969696" />
-					</Icons>
+					</IconBox>
 					<TextFind
-						showPadding={!searchDisplay}
+						growField={!searchDisplay}
 						autoCorrect={false}
 						autoCapitalize="none"
 						onFocus={() => setSearchDisplay(true)}
