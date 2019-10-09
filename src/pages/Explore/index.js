@@ -5,6 +5,7 @@ import Background from '../../components/Background';
 import Search from '../../components/Search';
 import HelpYouFind from '../../components/HelpYouFind';
 import KeepExplore from '../../components/KeepExplore';
+import PlacesGroup from '../../components/PlacesGroup';
 
 import { Container, FeedList } from './styles';
 
@@ -17,6 +18,7 @@ const Explore = () => {
 					<FeedList>
 						<HelpYouFind />
 						<KeepExplore />
+						<PlacesGroup />
 					</FeedList>
 				</Container>
 			</Background>

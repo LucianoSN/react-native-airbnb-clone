@@ -6,7 +6,6 @@ import { Container, Title, CoverContainer, Cover } from './styles';
 const width = Math.round(Dimensions.get('window').width);
 
 const KeepExplore = () => {
-	console.log(width);
 	return (
 		<Container>
 			<Title>Continue explorando</Title>

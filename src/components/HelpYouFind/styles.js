@@ -44,8 +44,8 @@ export const CategoryImage = styled.View`
 
 export const CategoryImagePlace = styled.Image.attrs({
 	resizeMode: 'cover',
-	borderTopLeftRadius: 4,
-	borderTopRightRadius: 4,
+	borderTopLeftRadius: 5,
+	borderTopRightRadius: 5,
 })`
 	flex: 1;
 	width: 100%;
