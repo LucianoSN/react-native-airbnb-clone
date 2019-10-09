@@ -15,6 +15,8 @@ export const CoverContainer = styled.View`
 	width: ${props => parseInt(props.wSize) - 40};
 	margin-top: 20px;
 	height: 200px;
+	background-color: #f2f2f2;
+	border-radius: 5px;
 `;
 
 export const Cover = styled.Image.attrs({

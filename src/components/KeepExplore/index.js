@@ -9,7 +9,7 @@ const KeepExplore = () => {
 	console.log(width);
 	return (
 		<Container>
-			<Title>Continue Explorando</Title>
+			<Title>Continue explorando</Title>
 			<CoverContainer wSize={width}>
 				<Cover
 					source={require('../../assets/deauville_alentours.jpg')}
