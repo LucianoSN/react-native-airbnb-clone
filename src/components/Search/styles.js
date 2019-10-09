@@ -8,18 +8,20 @@ export const Container = styled.View`
 
 export const Find = styled.View`
 	flex-direction: row;
-	padding: 10px;
+	padding: 10px 10px 10px 20px;
 	background-color: #fff;
-	margin: 5px 20px;
+	margin: 0 20px 20px 20px;
+	border-radius: 4px;
 
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 8px rgba(130, 130, 130, 0.3);
 `;
 
 export const TextFind = styled.TextInput.attrs({
 	placeholder: 'Experimente "Los Angeles"',
-	placeholderTextColor: '#666',
+	placeholderTextColor: '#969696',
 	fontSize: 14,
 	fontWeight: 'bold',
+	returnKeyType: 'search',
 })`
 	flex: 1;
 	background-color: #fff;

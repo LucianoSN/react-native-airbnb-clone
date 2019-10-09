@@ -8,8 +8,8 @@ const Search = () => {
 	return (
 		<Container>
 			<Find>
-				<Icon name="ios-search" size={20} />
-				<TextFind></TextFind>
+				<Icon name="ios-search" size={20} color="#969696" />
+				<TextFind autoCorrect={false} autoCapitalize="none" />
 			</Find>
 		</Container>
 	);

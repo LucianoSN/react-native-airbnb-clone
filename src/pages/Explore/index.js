@@ -13,7 +13,6 @@ const Explore = () => {
 			<Background>
 				<Container>
 					<Search />
-					<Text>Explore</Text>
 				</Container>
 			</Background>
 		</>
