@@ -23,7 +23,7 @@ export const List = styled.FlatList.attrs({
 export const Category = styled.View`
 	flex: 1;
 	height: 130px;
-	width: 150px;
+	width: 140px;
 
 	margin-right: 15px;
 	margin-bottom: 10px;
@@ -40,6 +40,15 @@ export const Category = styled.View`
 export const CategoryImage = styled.View`
 	flex: 2;
 	background-color: #f2f2f2;
+`;
+
+export const CategoryImagePlace = styled.Image.attrs({
+	resizeMode: 'cover',
+	borderTopLeftRadius: 4,
+	borderTopRightRadius: 4,
+})`
+	flex: 1;
+	width: 100%;
 `;
 
 export const CategoryContent = styled.View`

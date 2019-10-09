@@ -4,7 +4,24 @@ import Section from './section';
 
 import { Container, Title, List } from './styles';
 
-const data = ['Estadias', 'Experiências', 'Aventuras', 'Restaurantes'];
+const data = [
+	{
+		title: 'Estadias',
+		photo: require('../../assets/home.jpg'),
+	},
+	{
+		title: 'Experiências',
+		photo: require('../../assets/experiences.jpg'),
+	},
+	{
+		title: 'Aventuras',
+		photo: require('../../assets/home.jpg'),
+	},
+	{
+		title: 'Restaurantes',
+		photo: require('../../assets/restaurant.jpg'),
+	},
+];
 
 const HelpYouFind = () => {
 	return (
@@ -12,8 +29,10 @@ const HelpYouFind = () => {
 			<Title>O que você deseja encontrar, Stark?</Title>
 			<List
 				data={data}
-				keyExtractor={item => String(item)}
-				renderItem={({ item }) => <Section title={item} />}
+				keyExtractor={item => String(item.title)}
+				renderItem={({ item }) => (
+					<Section title={item.title} photo={item.photo} />
+				)}
 			/>
 		</Container>
 	);

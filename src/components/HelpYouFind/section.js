@@ -1,17 +1,19 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import {
 	Category,
 	CategoryImage,
+	CategoryImagePlace,
 	CategoryContent,
 	CategoryTitle,
 } from './styles';
 
-const Section = ({ title }) => {
+const Section = ({ title, photo }) => {
 	return (
 		<Category>
-			<CategoryImage />
+			<CategoryImage>
+				<CategoryImagePlace source={photo} />
+			</CategoryImage>
 			<CategoryContent>
 				<CategoryTitle>{title}</CategoryTitle>
 			</CategoryContent>
