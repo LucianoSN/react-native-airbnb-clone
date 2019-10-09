@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Background from '../../components/Background';
 import Search from '../../components/Search';
 import HelpYouFind from '../../components/HelpYouFind';
+import KeepExplore from '../../components/KeepExplore';
 
 import { Container, FeedList } from './styles';
 
@@ -15,6 +16,7 @@ const Explore = () => {
 					<Search />
 					<FeedList>
 						<HelpYouFind />
+						<KeepExplore />
 					</FeedList>
 				</Container>
 			</Background>
