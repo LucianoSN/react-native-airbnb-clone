@@ -30,6 +30,7 @@ const Search = () => {
 						<Icon name="ios-search" size={20} color="#969696" />
 					</Icons>
 					<TextFind
+						showPadding={!searchDisplay}
 						autoCorrect={false}
 						autoCapitalize="none"
 						onFocus={() => setSearchDisplay(true)}

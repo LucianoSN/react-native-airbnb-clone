@@ -38,7 +38,7 @@ export const TextFind = styled.TextInput.attrs({
 	returnKeyType: 'search',
 })`
 	background-color: #fff;
-	padding-left: 10px;
+	padding-left: ${props => (props.showPadding ? 10 : 0)};
 	height: 22px;
 `;
 
