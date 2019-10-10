@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Colors from '../../helpers/colors';
 
 export const Container = styled.View`
 	flex: 1;
@@ -9,10 +10,10 @@ export const Container = styled.View`
 export const Title = styled.Text`
 	font-size: 24px;
 	font-weight: 700;
-	color: #555;
+	color: ${Colors.title};
 `;
 
 export const Subtitle = styled.Text`
-	color: #555;
+	color: ${Colors.subTitle};
 	margin: 10px 0;
 `;

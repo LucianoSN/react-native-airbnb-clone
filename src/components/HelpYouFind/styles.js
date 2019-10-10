@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Colors from '../../helpers/colors';
 
 export const Container = styled.View`
 	flex: 1;
@@ -8,7 +9,7 @@ export const Container = styled.View`
 export const Title = styled.Text`
 	font-size: 24px;
 	font-weight: 700;
-	color: #555;
+	color: ${Colors.title};
 `;
 
 export const List = styled.FlatList.attrs({
@@ -28,18 +29,18 @@ export const Category = styled.View`
 	margin-right: 15px;
 	margin-bottom: 10px;
 
-	background-color: #fff;
+	background-color: ${Colors.white};
 
 	border-radius: 4px;
 	border-width: 0.5;
-	border-color: #ddd;
+	border-color: ${Colors.lineBorder};
 
 	box-shadow: 0 0 2px rgba(130, 130, 130, 0.2);
 `;
 
 export const CategoryImage = styled.View`
 	flex: 2;
-	background-color: #f2f2f2;
+	background-color: ${Colors.mark};
 `;
 
 export const CategoryImagePlace = styled.Image.attrs({
@@ -57,6 +58,6 @@ export const CategoryContent = styled.View`
 `;
 
 export const CategoryTitle = styled.Text`
-	color: #555;
+	color: ${Colors.title};
 	font-weight: bold;
 `;

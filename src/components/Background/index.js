@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import Colors from '../../helpers/colors';
 
 export default styled.View`
 	flex: 1;
-	background-color: #f8f8f8;
+	background-color: ${Colors.bgColor};
 `;

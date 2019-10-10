@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Colors from '../../helpers/colors';
 
 export const Container = styled.View`
 	align-items: center;
@@ -23,7 +24,7 @@ export const Find = styled.View`
 	margin: 5px 0 20px 0;
 	padding: 5px;
 
-	background-color: #fff;
+	background-color: ${Colors.white};
 	border-radius: 4px;
 
 	box-shadow: 0 0 8px rgba(130, 130, 130, 0.3);
@@ -38,13 +39,13 @@ export const IconBox = styled.View`
 
 export const TextFind = styled.TextInput.attrs({
 	placeholder: 'Experimente "Los Angeles"',
-	placeholderTextColor: '#969696',
+	placeholderTextColor: Colors.placeHold,
 	fontSize: 14,
 	fontWeight: 'bold',
 	returnKeyType: 'search',
 })`
 	flex: 2;
-	background-color: #fff;
+	background-color: ${Colors.white};
 	padding: 0 10px;
 	height: 40px;
 `;
@@ -53,7 +54,7 @@ export const CancelLink = styled.TouchableOpacity`
 	align-items: center;
 	justify-content: center;
 
-	color: #999;
+	color: ${Colors.title};
 	padding: 8px;
 
 	display: ${props => (!props.display ? 'none' : 'flex')};

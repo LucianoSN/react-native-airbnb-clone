@@ -7,6 +7,8 @@ import Saved from './pages/Saved';
 import Trips from './pages/Trips';
 import Profile from './pages/Profile';
 
+import Colors from './helpers/colors';
+
 const Routes = createAppContainer(
 	createSwitchNavigator(
 		{
@@ -20,13 +22,13 @@ const Routes = createAppContainer(
 				},
 				{
 					tabBarOptions: {
-						activeTintColor: '#FF5A5F',
-						inactiveTintColor: '#666',
+						activeTintColor: Colors.company,
+						inactiveTintColor: Colors.inactiveColor,
 						labelStyle: {
 							fontWeight: 'bold',
 						},
 						style: {
-							backgroundColor: '#F3F3F3',
+							backgroundColor: Colors.bgBottom,
 							padding: 5,
 						},
 					},
