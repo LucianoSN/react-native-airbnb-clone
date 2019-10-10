@@ -18,24 +18,22 @@ const Explore = () => {
 	};
 
 	return (
-		<>
-			<Background>
-				<Container>
-					<Search handleSearch={handleSearchInit} />
+		<Background>
+			<Container>
+				<Search handleSearch={handleSearchInit} />
 
-					<FeedList>
-						<AvoidHidden>
-							<SearchResult display={searchInit} />
-							<Feed display={searchInit}>
-								<HelpYouFind />
-								<KeepExplore />
-								<PlacesGroup />
-							</Feed>
-						</AvoidHidden>
-					</FeedList>
-				</Container>
-			</Background>
-		</>
+				<FeedList>
+					<AvoidHidden>
+						<SearchResult display={searchInit} />
+						<Feed display={searchInit}>
+							<HelpYouFind />
+							<KeepExplore />
+							<PlacesGroup />
+						</Feed>
+					</AvoidHidden>
+				</FeedList>
+			</Container>
+		</Background>
 	);
 };
 
