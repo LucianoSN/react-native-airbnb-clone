@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AirBnB Clone",
-    "slug": "airbnbclone",
+    "name": "AirBnB UI Clone",
+    "slug": "airbnbuiclone",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -15,7 +15,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#fff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

@@ -1,6 +1,8 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Keyboard } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+
+import Colors from '../../helpers/colors';
 
 import {
 	Container,
@@ -12,11 +14,15 @@ import {
 	CancelText,
 } from './styles';
 
-const Search = () => {
+const Search = ({ handleSearch }) => {
 	const searchRef = useRef();
 
 	const [searchDisplay, setSearchDisplay] = useState(false);
 	const [searchText, setSearchText] = useState('');
+
+	useEffect(() => {
+		handleSearch(searchDisplay);
+	}, [searchDisplay]);
 
 	const clearText = () => {
 		setSearchDisplay(false);
@@ -37,7 +43,7 @@ const Search = () => {
 			<FindBox>
 				<Find>
 					<IconBox display={!searchDisplay}>
-						<Icon name="ios-search" size={20} color="#969696" />
+						<Icon name="ios-search" size={20} color={Colors.icon} />
 					</IconBox>
 					<TextFind
 						ref={searchRef}

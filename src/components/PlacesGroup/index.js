@@ -7,7 +7,7 @@ const PlacesGroup = () => {
 		<Container>
 			<Title>Experiências com avaliações excelentes</Title>
 			<Subtitle>
-				Reserve atividades guiadas por anfitriões locais em su próxima
+				Reserve atividades guiadas por anfitriões locais em sua próxima
 				viagem
 			</Subtitle>
 		</Container>

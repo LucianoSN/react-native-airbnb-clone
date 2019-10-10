@@ -58,6 +58,6 @@ export const CategoryContent = styled.View`
 `;
 
 export const CategoryTitle = styled.Text`
-	color: ${Colors.title};
+	color: ${Colors.subTitle};
 	font-weight: bold;
 `;

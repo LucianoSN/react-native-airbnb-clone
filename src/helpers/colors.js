@@ -1,15 +1,16 @@
 export default {
-	company: '#FF5A5F',
+	company: '#ff5a5f',
 
 	bgColor: '#f8f8f8',
-	lineBorder: '#DDD',
+	lineBorder: '#ddd',
 	mark: '#f2f2f2',
 	placeHold: '#969696',
 
 	inactiveColor: '#666',
-	bgBottom: '#F3F3F3',
+	bgBottom: '#f3f3f3',
+	icon: '#969696',
 
-	white: '#FFF',
+	white: '#fff',
 
 	title: '#555',
 	subTitle: '#555',

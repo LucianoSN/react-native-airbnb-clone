@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import Background from '../../components/Background';
 import Search from '../../components/Search';
+import SearchResult from '../../components/SearchResult';
 import HelpYouFind from '../../components/HelpYouFind';
 import KeepExplore from '../../components/KeepExplore';
 import PlacesGroup from '../../components/PlacesGroup';
@@ -10,16 +11,27 @@ import PlacesGroup from '../../components/PlacesGroup';
 import { Container, FeedList } from './styles';
 
 const Explore = () => {
+	const [searchInit, setSearchInit] = useState(false);
+
+	const handleSearchInit = (init = false) => {
+		setSearchInit(init);
+	};
+
 	return (
 		<>
 			<Background>
 				<Container>
-					<Search />
-					<FeedList>
-						<HelpYouFind />
-						<KeepExplore />
-						<PlacesGroup />
-					</FeedList>
+					<Search handleSearch={handleSearchInit} />
+
+					{searchInit && <SearchResult />}
+
+					{!searchInit && (
+						<FeedList>
+							<HelpYouFind />
+							<KeepExplore />
+							<PlacesGroup />
+						</FeedList>
+					)}
 				</Container>
 			</Background>
 		</>
