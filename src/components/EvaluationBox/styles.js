@@ -6,7 +6,9 @@ export const Container = styled.View`
 	width: 50%;
 
 	margin-top: 20px;
-	padding-left: ${props => (props.padLeft ? 10 : 0)};
+
+	padding-left: ${props => (props.padLeft ? 5 : 0)};
+	padding-right: ${props => (props.padRight ? 5 : 0)};
 `;
 
 export const Category = styled.Text`

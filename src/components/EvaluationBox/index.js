@@ -10,10 +10,18 @@ const EvaluationBox = ({
 	category,
 	photo,
 }) => {
-	const padLeft = !(index === 0 || index >= itemsLength);
+	let hasRest = index % 2 === 0;
+
+	let padLeft = hasRest;
+	let padRight = !hasRest;
+
+	if (index === itemsLength && !hasRest) {
+		padLeft = false;
+		padRight = false;
+	}
 
 	return (
-		<Container padLeft={padLeft}>
+		<Container padLeft={padLeft} padRight={padRight}>
 			<Photo source={photo} />
 			<Category>{category}</Category>
 			<Title>{title}</Title>

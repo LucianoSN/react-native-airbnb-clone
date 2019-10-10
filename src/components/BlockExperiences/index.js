@@ -11,18 +11,21 @@ const data = [
 		price: 292,
 		category: 'Passeio de carro - Havana',
 		photo: require('../../assets/image005.jpg'),
+		stars: 4,
 	},
 	{
 		title: 'Noite, comidas e bosques do Lago de Como',
 		price: 139,
 		category: 'Caminhada guiada - Milão',
 		photo: require('../../assets/image006.jpg'),
+		stars: 2,
 	},
 	{
 		title: 'Descubra Colomitos e participe de caminhadas',
 		price: 135,
 		category: 'Caminhada ecológica - Porto',
 		photo: require('../../assets/image007.jpg'),
+		stars: 5,
 	},
 ];
 
@@ -37,8 +40,8 @@ const BlockExperiences = () => {
 				{data.map((item, index) => (
 					<EvaluationBox
 						key={String(item.title)}
-						index={index}
-						itemsLength={data.length - 1}
+						index={index + 1}
+						itemsLength={data.length}
 						title={item.title}
 						price={item.price}
 						category={item.category}
