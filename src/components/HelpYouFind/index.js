@@ -7,7 +7,7 @@ import { Container, Title, List } from './styles';
 const data = [
 	{
 		title: 'Estadias',
-		photo: require('../../assets/Le_T_Chalet_living_room_2.jpg'),
+		photo: require('../../assets/image004.jpg'),
 	},
 	{
 		title: 'Experiências',
@@ -15,7 +15,7 @@ const data = [
 	},
 	{
 		title: 'Aventuras',
-		photo: require('../../assets/airbnb-luxe-punta-mita-mexico-ABLUX0619.jpg'),
+		photo: require('../../assets/image002.jpg'),
 	},
 	{
 		title: 'Restaurantes',

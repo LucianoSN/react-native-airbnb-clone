@@ -10,9 +10,7 @@ const KeepExplore = () => {
 		<Container>
 			<Title>Continue explorando</Title>
 			<CoverContainer wSize={width}>
-				<Cover
-					source={require('../../assets/deauville_alentours.jpg')}
-				/>
+				<Cover source={require('../../assets/image008.jpg')} />
 			</CoverContainer>
 		</Container>
 	);
