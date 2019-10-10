@@ -2,9 +2,18 @@ import React from 'react';
 
 import { Container, Title, Price, Category, Photo } from './styles';
 
-const EvaluationBox = ({ title, price, category, photo }) => {
+const EvaluationBox = ({
+	index,
+	itemsLength,
+	title,
+	price,
+	category,
+	photo,
+}) => {
+	const padLeft = !(index === 0 || index >= itemsLength);
+
 	return (
-		<Container>
+		<Container padLeft={padLeft}>
 			<Photo source={photo} />
 			<Category>{category}</Category>
 			<Title>{title}</Title>

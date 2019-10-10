@@ -34,9 +34,11 @@ const BlockExperiences = () => {
 				subtitle="Reserve atividades guiadas por anfitriões locais em sua próxima viagem"
 			/>
 			<Container>
-				{data.map(item => (
+				{data.map((item, index) => (
 					<EvaluationBox
 						key={String(item.title)}
+						index={index}
+						itemsLength={data.length - 1}
 						title={item.title}
 						price={item.price}
 						category={item.category}

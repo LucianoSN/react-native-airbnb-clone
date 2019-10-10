@@ -3,10 +3,10 @@ import Colors from '../../helpers/colors';
 
 export const Container = styled.View`
 	flex-grow: 1;
-	width: 140px;
-	
-	padding: 0 5px;
+	width: 50%;
+
 	margin-top: 20px;
+	padding-left: ${props => (props.padLeft ? 10 : 0)};
 `;
 
 export const Category = styled.Text`
