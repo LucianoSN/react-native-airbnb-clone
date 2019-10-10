@@ -23,15 +23,17 @@ const Explore = () => {
 				<Container>
 					<Search handleSearch={handleSearchInit} />
 
-					{searchInit && <SearchResult />}
+					<FeedList>
+						{searchInit && <SearchResult />}
 
-					{!searchInit && (
-						<FeedList>
-							<HelpYouFind />
-							<KeepExplore />
-							<PlacesGroup />
-						</FeedList>
-					)}
+						{!searchInit && (
+							<>
+								<HelpYouFind />
+								<KeepExplore />
+								<PlacesGroup />
+							</>
+						)}
+					</FeedList>
 				</Container>
 			</Background>
 		</>
