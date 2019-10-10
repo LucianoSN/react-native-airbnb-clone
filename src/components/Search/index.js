@@ -34,9 +34,7 @@ const Search = ({ handleSearch }) => {
 		clearText();
 	};
 
-	const handleSubmit = () => {
-		clearText();
-	};
+	const handleSubmit = () => {};
 
 	return (
 		<Container>
