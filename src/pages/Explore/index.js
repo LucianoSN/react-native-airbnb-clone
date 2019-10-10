@@ -26,13 +26,13 @@ const Explore = () => {
 				<FeedList>
 					<AvoidHidden>
 						<SearchResult display={searchInit} />
-						<Feed display={searchInit}>
-							<HelpYouFind />
-							<KeepExplore />
-							<BlockExperiences />
-							<BlockAdventures />
-						</Feed>
 					</AvoidHidden>
+					<Feed display={searchInit}>
+						<HelpYouFind />
+						<KeepExplore />
+						<BlockExperiences />
+						<BlockAdventures />
+					</Feed>
 				</FeedList>
 			</Container>
 		</Background>
