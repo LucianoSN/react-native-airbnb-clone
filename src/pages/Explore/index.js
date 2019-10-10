@@ -8,7 +8,7 @@ import HelpYouFind from '../../components/HelpYouFind';
 import KeepExplore from '../../components/KeepExplore';
 import PlacesGroup from '../../components/PlacesGroup';
 
-import { Container, FeedList } from './styles';
+import { Container, FeedList, AvoidHidden } from './styles';
 
 const Explore = () => {
 	const [searchInit, setSearchInit] = useState(false);
@@ -24,15 +24,17 @@ const Explore = () => {
 					<Search handleSearch={handleSearchInit} />
 
 					<FeedList>
-						{searchInit && <SearchResult />}
+						<AvoidHidden>
+							{searchInit && <SearchResult />}
 
-						{!searchInit && (
-							<>
-								<HelpYouFind />
-								<KeepExplore />
-								<PlacesGroup />
-							</>
-						)}
+							{!searchInit && (
+								<>
+									<HelpYouFind />
+									<KeepExplore />
+									<PlacesGroup />
+								</>
+							)}
+						</AvoidHidden>
 					</FeedList>
 				</Container>
 			</Background>

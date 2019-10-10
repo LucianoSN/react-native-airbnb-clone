@@ -1,12 +1,22 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-import { Container } from './styles';
+import Locals from './Locals';
+
+import { Container, Title } from './styles';
 
 const SearchResult = () => {
 	return (
 		<Container>
-			<Text>Search</Text>
+			<Locals iconName="ios-pin" name="Próximo" />
+
+			<Title>BUSCAS RECENTES</Title>
+
+			<Locals iconName="md-time" name="Austin" />
+
+			<Locals
+				iconName="md-time"
+				name="Austin - Acomodações do Airbnb Plus"
+			/>
 		</Container>
 	);
 };
