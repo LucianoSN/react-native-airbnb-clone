@@ -4,7 +4,6 @@ import Colors from '../../helpers/colors';
 export const Container = styled.View`
 	flex: 1;
 	padding: 10px 20px;
-	margin-top: 20px;
 `;
 
 export const Title = styled.Text`
@@ -15,5 +14,5 @@ export const Title = styled.Text`
 
 export const Subtitle = styled.Text`
 	color: ${Colors.subTitle};
-	margin: 10px 0;
+	margin-top: 10px;
 `;

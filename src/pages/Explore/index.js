@@ -7,6 +7,7 @@ import SearchResult from '../../components/SearchResult';
 import HelpYouFind from '../../components/HelpYouFind';
 import KeepExplore from '../../components/KeepExplore';
 import PlacesGroup from '../../components/PlacesGroup';
+import BlockExperiences from '../../components/BlockExperiences';
 
 import { Container, FeedList, AvoidHidden, Feed } from './styles';
 
@@ -28,7 +29,7 @@ const Explore = () => {
 						<Feed display={searchInit}>
 							<HelpYouFind />
 							<KeepExplore />
-							<PlacesGroup />
+							<BlockExperiences />
 						</Feed>
 					</AvoidHidden>
 				</FeedList>

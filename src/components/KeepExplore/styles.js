@@ -4,6 +4,7 @@ import Colors from '../../helpers/colors';
 export const Container = styled.View`
 	flex: 1;
 	padding: 10px 20px;
+	margin-bottom: 20px;
 `;
 
 export const Title = styled.Text`

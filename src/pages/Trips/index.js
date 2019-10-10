@@ -10,7 +10,7 @@ const Trips = () => {
 	return (
 		<Background>
 			<Container>
-				<Text>Viagens</Text>
+				<Text>Trips</Text>
 			</Container>
 		</Background>
 	);

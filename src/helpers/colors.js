@@ -14,4 +14,5 @@ export default {
 
 	title: '#555',
 	subTitle: '#555',
+	category: '#49779a',
 };

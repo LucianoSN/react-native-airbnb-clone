@@ -2,14 +2,11 @@ import React from 'react';
 
 import { Container, Title, Subtitle } from './styles';
 
-const PlacesGroup = () => {
+const PlacesGroup = ({ title, subtitle }) => {
 	return (
 		<Container>
-			<Title>Experiências com avaliações excelentes</Title>
-			<Subtitle>
-				Reserve atividades guiadas por anfitriões locais em sua próxima
-				viagem
-			</Subtitle>
+			<Title>{title}</Title>
+			<Subtitle>{subtitle}</Subtitle>
 		</Container>
 	);
 };
