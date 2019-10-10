@@ -4,9 +4,9 @@ import Locals from './Locals';
 
 import { Container, Title } from './styles';
 
-const SearchResult = () => {
+const SearchResult = ({ display }) => {
 	return (
-		<Container>
+		<Container display={display}>
 			<Locals iconName="ios-pin" name="Próximo" />
 
 			<Title>BUSCAS RECENTES</Title>

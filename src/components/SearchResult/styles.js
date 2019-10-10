@@ -4,6 +4,7 @@ import Colors from '../../helpers/colors';
 export const Container = styled.View`
 	flex: 1;
 	padding: 10px 20px;
+	display: ${props => (props.display ? 'flex' : 'none')};
 `;
 
 export const Near = styled.View`
