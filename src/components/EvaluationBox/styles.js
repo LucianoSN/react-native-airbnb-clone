@@ -42,14 +42,14 @@ export const Photo = styled.Image.attrs({
 `;
 
 export const StarContainer = styled.View`
-	width: 50px;
+	width: 60px;
 	margin-top: 5px;
 `;
 
 export const Stars = styled(StarRating).attrs({
 	disable: true,
 	maxStars: 5,
-	starSize: 13,
+	starSize: 12,
 	fullStar: 'ios-star',
 	emptyStar: 'ios-star',
 	iconSet: 'Ionicons',

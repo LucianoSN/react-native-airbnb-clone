@@ -21,7 +21,7 @@ const data = [
 		stars: 3,
 	},
 	{
-		title: 'Northern Hiking',
+		title: 'Northern Lights Hiking with Overnight',
 		price: 871,
 		category: 'Viagem noturna - Tromsoe',
 		photo: require('../../assets/image011.jpg'),
@@ -53,6 +53,7 @@ const BlockAdventures = () => {
 						price={item.price}
 						category={item.category}
 						photo={item.photo}
+						starsRating={item.stars}
 					/>
 				))}
 			</Container>

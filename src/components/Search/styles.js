@@ -21,7 +21,7 @@ export const Find = styled.View`
 	align-self: center;
 	width: 100%;
 
-	margin: 5px 0 20px 0;
+	margin: 5px 0 5px 0;
 	padding: 5px;
 
 	background-color: ${Colors.white};
@@ -62,6 +62,5 @@ export const CancelLink = styled.TouchableOpacity`
 
 export const CancelText = styled.Text`
 	font-size: 16px;
-	margin-bottom: 12px;
 	margin-left: 10px;
 `;

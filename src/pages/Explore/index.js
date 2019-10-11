@@ -5,6 +5,7 @@ import Background from '../../components/Background';
 
 import Search from '../../components/Search';
 import SearchResult from '../../components/SearchResult';
+import TagMenu from '../../components/TagMenu';
 import HelpYouFind from '../../components/HelpYouFind';
 import KeepExplore from '../../components/KeepExplore';
 import { Adventures, Experiences } from '../../components/SectionsBlock';
@@ -22,6 +23,7 @@ const Explore = () => {
 		<Background>
 			<Container>
 				<Search handleSearch={handleSearchInit} />
+				<TagMenu display={searchInit} />
 
 				<FeedList>
 					<AvoidHidden>
