@@ -9,6 +9,7 @@ export default {
 	inactiveColor: '#666',
 	bgBottom: '#f3f3f3',
 	icon: '#969696',
+	star: '#d3d1d1',
 
 	white: '#fff',
 

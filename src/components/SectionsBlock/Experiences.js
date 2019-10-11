@@ -46,6 +46,7 @@ const BlockExperiences = () => {
 						price={item.price}
 						category={item.category}
 						photo={item.photo}
+						starsRating={item.stars}
 					/>
 				))}
 			</Container>

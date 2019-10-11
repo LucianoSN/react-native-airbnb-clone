@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { Container, Title, Price, Category, Photo } from './styles';
+import {
+	Container,
+	Title,
+	Price,
+	Category,
+	Photo,
+	StarContainer,
+	Stars,
+} from './styles';
 
 const EvaluationBox = ({
 	index,
@@ -9,6 +17,7 @@ const EvaluationBox = ({
 	price,
 	category,
 	photo,
+	starsRating,
 }) => {
 	let hasRest = index % 2 === 0;
 
@@ -26,6 +35,10 @@ const EvaluationBox = ({
 			<Category>{category}</Category>
 			<Title>{title}</Title>
 			<Price>{`R$ ${price} por pessoa`}</Price>
+
+			<StarContainer>
+				<Stars rating={starsRating} />
+			</StarContainer>
 		</Container>
 	);
 };

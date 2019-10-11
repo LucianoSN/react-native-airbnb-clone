@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Colors from '../../styles/colors';
 
+import StarRating from 'react-native-star-rating';
+
 export const Container = styled.View`
 	flex-grow: 1;
 	width: 50%;
@@ -38,3 +40,19 @@ export const Photo = styled.Image.attrs({
 	height: 100px;
 	background-color: ${Colors.mark};
 `;
+
+export const StarContainer = styled.View`
+	width: 50px;
+	margin-top: 5px;
+`;
+
+export const Stars = styled(StarRating).attrs({
+	disable: true,
+	maxStars: 5,
+	starSize: 13,
+	fullStar: 'ios-star',
+	emptyStar: 'ios-star',
+	iconSet: 'Ionicons',
+	fullStarColor: Colors.category,
+	emptyStarColor: Colors.star,
+})``;
