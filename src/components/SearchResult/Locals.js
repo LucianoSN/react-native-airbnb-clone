@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Colors from '../../helpers/colors';
+import Colors from '../../styles/colors';
 
 import { Near, Local } from './styles';
 

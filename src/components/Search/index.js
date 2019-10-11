@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Keyboard } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import Colors from '../../helpers/colors';
+import Colors from '../../styles/colors';
 
 import {
 	Container,

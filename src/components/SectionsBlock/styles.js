@@ -1,7 +1,15 @@
 import styled from 'styled-components';
-import Colors from '../../helpers/colors';
+import Colors from '../../styles/colors';
 
 export const Container = styled.View`
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+
+	padding: 0 20px;
+	margin-bottom: 20px;
+`;
+export const HeaderContainer = styled.View`
 	flex: 1;
 	padding: 10px 20px;
 	margin-top: 10px;

@@ -7,7 +7,7 @@ import Saved from './pages/Saved';
 import Trips from './pages/Trips';
 import Profile from './pages/Profile';
 
-import Colors from './helpers/colors';
+import Colors from './styles/colors';
 
 const Routes = createAppContainer(
 	createSwitchNavigator(

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PlacesGroup from '../PlacesGroup';
+import Header from './Header';
 import EvaluationBox from '../EvaluationBox';
 
 import { Container } from './styles';
@@ -32,7 +32,7 @@ const data = [
 const BlockExperiences = () => {
 	return (
 		<>
-			<PlacesGroup
+			<Header
 				title="Experiências com avaliações excelentes"
 				subtitle="Reserve atividades guiadas por anfitriões locais em sua próxima viagem"
 			/>

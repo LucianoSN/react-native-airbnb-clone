@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PlacesGroup from '../PlacesGroup';
+import Header from './Header';
 import EvaluationBox from '../EvaluationBox';
 
 import { Container } from './styles';
@@ -39,7 +39,7 @@ const data = [
 const BlockAdventures = () => {
 	return (
 		<>
-			<PlacesGroup
+			<Header
 				title="Apresentamos as Aventuras Airbnb"
 				subtitle="Viagens de vários dias lideradas por especialistas locais, com atividades, refeições e estadias inclusas"
 			/>
