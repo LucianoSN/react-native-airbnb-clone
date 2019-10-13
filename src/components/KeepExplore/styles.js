@@ -16,15 +16,30 @@ export const Title = styled.Text`
 export const CoverContainer = styled.View`
 	width: ${props => parseInt(props.wSize) - 40};
 	margin-top: 20px;
-	height: 200px;
+	height: 400px;
 	background-color: ${Colors.mark};
 	border-radius: 5px;
 `;
 
-export const Cover = styled.Image.attrs({
+export const Cover = styled.ImageBackground.attrs({
 	resizeMode: 'cover',
-	borderRadius: 5,
+	borderRadius: 10,
 })`
 	flex: 1;
 	width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 40px;
+`;
+
+export const CoverTitle = styled.Text`
+	font-size: 24px;
+	font-weight: 500;
+	color: ${Colors.white};
+	margin-bottom: 10px;
+`;
+
+export const CoverSubtitle = styled.Text`
+	font-size: 16px;
+	color: ${Colors.white};
 `;

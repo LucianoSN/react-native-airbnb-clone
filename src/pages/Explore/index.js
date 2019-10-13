@@ -8,7 +8,9 @@ import SearchResult from '../../components/SearchResult';
 import TagMenu from '../../components/TagMenu';
 import HelpYouFind from '../../components/HelpYouFind';
 import KeepExplore from '../../components/KeepExplore';
-import { Adventures, Experiences } from '../../components/SectionsBlock';
+import Sections from '../../components/Sections';
+
+import { experiences, adventures, wordsPlace } from '../../data/explore';
 
 import { Container, FeedList, AvoidHidden, Feed } from './styles';
 
@@ -32,8 +34,9 @@ const Explore = () => {
 					<Feed display={searchInit}>
 						<HelpYouFind />
 						<KeepExplore />
-						<Experiences />
-						<Adventures />
+						<Sections data={experiences} />
+						<Sections data={adventures} />
+						<Sections data={wordsPlace} />
 					</Feed>
 				</FeedList>
 			</Container>
