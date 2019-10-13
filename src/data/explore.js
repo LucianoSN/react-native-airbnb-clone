@@ -21,7 +21,7 @@ export const experiences = {
 			title: 'Descubra Colomitos e participe de caminhadas',
 			price: 135,
 			category: 'Caminhada ecológica - Porto',
-			photo: require('../assets/image007.jpg'),
+			photo: require('../assets/image008.jpg'),
 			stars: 5,
 		},
 	],
@@ -36,7 +36,7 @@ export const adventures = {
 			title: 'Andando com elefantes - 4 dias/3 noites',
 			price: 2.449,
 			category: 'Viagem de 4 dias - Chiang Mai',
-			photo: require('../assets/image009.jpg'),
+			photo: require('../assets/image026.jpg'),
 			stars: 5,
 		},
 		{
@@ -85,7 +85,7 @@ export const wordsPlace = {
 			title: 'The Joshua Tree House',
 			price: 871,
 			category: 'Viagem noturna - Tromsoe',
-			photo: require('../assets/image026.jpg'),
+			photo: require('../assets/image027.jpg'),
 			stars: 2,
 		},
 		{
