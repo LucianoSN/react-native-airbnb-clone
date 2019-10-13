@@ -35,8 +35,8 @@ const Explore = () => {
 						<HelpYouFind />
 						<KeepExplore />
 						<Sections data={experiences} />
-						<Sections data={adventures} />
-						<Sections data={wordsPlace} />
+						{/*<Sections data={adventures} />*/}
+						{/*<Sections data={wordsPlace} />*/}
 					</Feed>
 				</FeedList>
 			</Container>

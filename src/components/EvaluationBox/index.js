@@ -12,7 +12,7 @@ import {
 
 const EvaluationBox = ({
 	index,
-	itemsLength,
+	itemsTotal,
 	title,
 	price,
 	category,
@@ -24,7 +24,7 @@ const EvaluationBox = ({
 	let padLeft = hasRest;
 	let padRight = !hasRest;
 
-	if (index === itemsLength && !hasRest) {
+	if (index === itemsTotal && !hasRest) {
 		padLeft = false;
 		padRight = false;
 	}

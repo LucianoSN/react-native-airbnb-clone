@@ -14,7 +14,7 @@ const Sections = ({ data }) => {
 					<EvaluationBox
 						key={String(item.title)}
 						index={index + 1}
-						itemsLength={data.length}
+						itemsTotal={data.places.length}
 						title={item.title}
 						price={item.price}
 						category={item.category}

@@ -1,3 +1,5 @@
+export const cities = ['Bonito', 'Los Angeles', 'Veneza', 'Roma'];
+
 export const experiences = {
 	title: 'Experiências com avaliações excelentes',
 	subtitle:
