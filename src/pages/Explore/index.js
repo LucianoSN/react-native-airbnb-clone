@@ -31,8 +31,8 @@ const Explore = () => {
 	});
 
 	const opacityY = Animated.interpolate(diffClampScrollY, {
-		inputRange: [0, 20, TAG_HEIGHT],
-		outputRange: [1, 0.7, 0],
+		inputRange: [0, 30, TAG_HEIGHT],
+		outputRange: [1, 0.8, 0],
 		extrapolate: Extrapolate.CLAMP,
 	});
 

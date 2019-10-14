@@ -19,4 +19,5 @@ export const FeedList = styled(Animated.ScrollView).attrs({
 
 export const Feed = styled.View`
 	display: ${props => (!props.display ? 'flex' : 'none')};
+	padding-bottom: 45px;
 `;
