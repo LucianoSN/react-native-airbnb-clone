@@ -2,9 +2,16 @@ import React from 'react';
 
 import { Container, Button, Text } from './styles';
 
-const TagMenu = ({ display }) => {
+const TagMenu = ({ display, tagY, tagHeight, opacitY }) => {
 	return (
-		<Container display={display}>
+		<Container
+			style={[
+				{ transform: [{ translateY: tagY }] },
+				{ opacity: opacitY },
+			]}
+			display={display}
+			tagHeight={tagHeight}
+		>
 			<Button>
 				<Text>Datas</Text>
 			</Button>

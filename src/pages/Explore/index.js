@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Animated from 'react-native-reanimated';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 import Background from '../../components/Background';
@@ -14,8 +15,26 @@ import { experiences, adventures, wordsPlace } from '../../data/explore';
 
 import { Container, FeedList, AvoidHidden, Feed } from './styles';
 
+const { Extrapolate } = Animated;
+const TAG_HEIGHT = 85;
+
 const Explore = () => {
 	const [searchInit, setSearchInit] = useState(false);
+
+	const scrollY = new Animated.Value(0);
+	const diffClampScrollY = Animated.diffClamp(scrollY, 0, TAG_HEIGHT);
+
+	const tagY = Animated.interpolate(diffClampScrollY, {
+		inputRange: [0, TAG_HEIGHT],
+		outputRange: [0, -TAG_HEIGHT],
+		extrapolate: Extrapolate.CLAMP,
+	});
+
+	const opacityY = Animated.interpolate(diffClampScrollY, {
+		inputRange: [0, 20, TAG_HEIGHT],
+		outputRange: [1, 0.7, 0],
+		extrapolate: Extrapolate.CLAMP,
+	});
 
 	const handleSearchInit = (init = false) => {
 		setSearchInit(init);
@@ -25,9 +44,22 @@ const Explore = () => {
 		<Background>
 			<Container>
 				<Search handleSearch={handleSearchInit} />
-				<TagMenu display={searchInit} />
+				<TagMenu
+					display={searchInit}
+					tagY={tagY}
+					tagHeight={TAG_HEIGHT}
+					opacitY={opacityY}
+				/>
 
-				<FeedList>
+				<FeedList
+					bounces={false}
+					scrollEventThrottle={16}
+					onScroll={Animated.event([
+						{
+							nativeEvent: { contentOffset: { y: scrollY } },
+						},
+					])}
+				>
 					<AvoidHidden>
 						<SearchResult display={searchInit} />
 					</AvoidHidden>

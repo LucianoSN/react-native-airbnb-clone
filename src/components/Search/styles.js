@@ -5,6 +5,7 @@ export const Container = styled.View`
 	align-items: center;
 	justify-content: center;
 	height: 80px;
+	z-index: 100;
 `;
 
 export const FindBox = styled.View`

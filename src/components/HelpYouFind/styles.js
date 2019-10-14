@@ -31,7 +31,7 @@ export const Category = styled.View`
 
 	background-color: ${Colors.white};
 
-	border-radius: 5px;
+	border-radius: 7px;
 	border-width: 0.5;
 	border-color: ${Colors.lineBorder};
 
@@ -41,8 +41,8 @@ export const Category = styled.View`
 export const CategoryImage = styled.View`
 	flex: 2;
 	background-color: ${Colors.mark};
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
 	overflow: hidden;
 `;
 
