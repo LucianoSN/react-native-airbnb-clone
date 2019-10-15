@@ -49,13 +49,10 @@ const Explore = () => {
 		setSearchInit(init);
 	};
 
-	const debugScrollY = block([
-		call([scrollY], x => console.log('scroll: ', x[0])),
-		scrollY,
-	]);
-
 	const debugTagY = block([
-		call([tagY], x => console.log('tag: ', x[0])),
+		call([tagY, scrollY], x => {
+			console.log('tag: ', x[0], 'scroll: ', x[1]);
+		}),
 		tagY,
 	]);
 
@@ -65,7 +62,7 @@ const Explore = () => {
 				<Search handleSearch={handleSearchInit} />
 				<TagMenu
 					display={searchInit}
-					tagY={tagY}
+					tagY={debugTagY}
 					tagHeight={TAG_HEIGHT}
 					opacitY={opacityY}
 				/>
