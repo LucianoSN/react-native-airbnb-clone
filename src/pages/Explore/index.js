@@ -52,16 +52,14 @@ const Explore = () => {
 	};
 
 	const debugTagY = block([
-		call([tagY, scrollY], x => {
-			console.log('tagY: ', x[0], 'scrollY: ', x[1]);
+		call([tagY, scrollY, offsetY], x => {
+			console.log('tagY:', x[0], 'scrollY:', x[1], 'offsetY:', x[2]);
 		}),
-		scrollY <= offsetY && tagY <= offsetY ? offsetY : tagY,
-
-		// tagY
+		tagY,
 	]);
 
-	const positionY = scrollY <= offsetY ? offsetY : tagY;
-	const opp = scrollY <= offsetY && tagY <= 0 ? 1 : opacityY;
+	const positionY = scrollY === offsetY ? diffClampScrollY : tagY;
+	const opp = scrollY === offsetY ? 1 : opacityY;
 
 	return (
 		<Background>
@@ -69,9 +67,9 @@ const Explore = () => {
 				<Search handleSearch={handleSearchInit} />
 				<TagMenu
 					display={searchInit}
-					tagY={debugTagY}
+					tagY={positionY}
 					tagHeight={TAG_HEIGHT}
-					opacitY={opp}
+					opacitY={opacityY}
 				/>
 
 				<FeedList
