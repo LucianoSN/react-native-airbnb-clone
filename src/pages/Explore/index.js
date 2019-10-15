@@ -22,6 +22,8 @@ const Explore = () => {
 	const [searchInit, setSearchInit] = useState(false);
 
 	const scrollY = new Animated.Value(0);
+	const offsetY = new Animated.Value(0);
+
 	const diffClampScrollY = Animated.diffClamp(scrollY, 0, TAG_HEIGHT);
 
 	const tagY = Animated.interpolate(diffClampScrollY, {
@@ -51,10 +53,15 @@ const Explore = () => {
 
 	const debugTagY = block([
 		call([tagY, scrollY], x => {
-			console.log('tag: ', x[0], 'scroll: ', x[1]);
+			console.log('tagY: ', x[0], 'scrollY: ', x[1]);
 		}),
-		tagY,
+		scrollY <= offsetY && tagY <= offsetY ? offsetY : tagY,
+
+		// tagY
 	]);
+
+	const positionY = scrollY <= offsetY ? offsetY : tagY;
+	const opp = scrollY <= offsetY && tagY <= 0 ? 1 : opacityY;
 
 	return (
 		<Background>
@@ -64,7 +71,7 @@ const Explore = () => {
 					display={searchInit}
 					tagY={debugTagY}
 					tagHeight={TAG_HEIGHT}
-					opacitY={opacityY}
+					opacitY={opp}
 				/>
 
 				<FeedList
