@@ -15,7 +15,7 @@ import { experiences, adventures, wordsPlace } from '../../data/explore';
 
 import { Container, FeedList, AvoidHidden, Feed } from './styles';
 
-const { Extrapolate, call, block } = Animated;
+const { Extrapolate, call, block, cond } = Animated;
 const TAG_HEIGHT = 85;
 
 const Explore = () => {
@@ -23,6 +23,7 @@ const Explore = () => {
 
 	const scrollY = new Animated.Value(0);
 	const offsetY = new Animated.Value(0);
+	const stuck = new Animated.Value(85);
 
 	const diffClampScrollY = Animated.diffClamp(scrollY, 0, TAG_HEIGHT);
 
@@ -52,14 +53,15 @@ const Explore = () => {
 	};
 
 	const debugTagY = block([
-		call([tagY, scrollY, offsetY], x => {
-			console.log('tagY:', x[0], 'scrollY:', x[1], 'offsetY:', x[2]);
+		call([tagY, scrollY, diffClampScrollY], x => {
+			console.log('tagY:', x[0], 'scrollY:', x[1], 'diffClamp:', x[2]);
 		}),
-		tagY,
+		// tagY,
+		cond(scrollY <= offsetY && tagY <= offsetY, offsetY, tagY),
 	]);
 
-	const positionY = scrollY === offsetY ? diffClampScrollY : tagY;
-	const opp = scrollY === offsetY ? 1 : opacityY;
+	// const positionY = scrollY === offsetY ? stuck : tagY;
+	// const opp = scrollY < offsetY && diffClampScrollY === stuck ? 1 : opacityY;
 
 	return (
 		<Background>
@@ -67,7 +69,7 @@ const Explore = () => {
 				<Search handleSearch={handleSearchInit} />
 				<TagMenu
 					display={searchInit}
-					tagY={positionY}
+					tagY={tagY}
 					tagHeight={TAG_HEIGHT}
 					opacitY={opacityY}
 				/>
