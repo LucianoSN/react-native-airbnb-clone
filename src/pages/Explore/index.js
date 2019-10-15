@@ -15,7 +15,7 @@ import { experiences, adventures, wordsPlace } from '../../data/explore';
 
 import { Container, FeedList, AvoidHidden, Feed } from './styles';
 
-const { Extrapolate, call, block, cond } = Animated;
+const { Extrapolate, call, block, cond, greaterThan } = Animated;
 const TAG_HEIGHT = 85;
 
 const Explore = () => {
@@ -23,19 +23,18 @@ const Explore = () => {
 
 	const scrollY = new Animated.Value(0);
 	const offsetY = new Animated.Value(0);
-	const stuck = new Animated.Value(85);
 
 	const diffClampScrollY = Animated.diffClamp(scrollY, 0, TAG_HEIGHT);
 
 	const tagY = Animated.interpolate(diffClampScrollY, {
 		inputRange: [0, TAG_HEIGHT],
 		outputRange: [0, -TAG_HEIGHT],
-		extrapolate: Extrapolate.CLAMP,
+		extrapolate: 'clamp',
 	});
 
 	const opacityY = Animated.interpolate(diffClampScrollY, {
 		inputRange: [0, 30, TAG_HEIGHT],
-		outputRange: [1, 0.8, 0],
+		outputRange: [1, 0.6, 0],
 		extrapolate: Extrapolate.CLAMP,
 	});
 
@@ -53,15 +52,23 @@ const Explore = () => {
 	};
 
 	const debugTagY = block([
-		call([tagY, scrollY, diffClampScrollY], x => {
-			console.log('tagY:', x[0], 'scrollY:', x[1], 'diffClamp:', x[2]);
+		call([tagY, scrollY, diffClampScrollY, offsetY], x => {
+			console.log(
+				'tagY:',
+				x[0],
+				'scrollY:',
+				x[1],
+				'diffClamp:',
+				x[2],
+				'offsetY',
+				x[3]
+			);
 		}),
-		// tagY,
-		cond(scrollY <= offsetY && tagY <= offsetY, offsetY, tagY),
+		cond(greaterThan(scrollY, offsetY), tagY, offsetY),
 	]);
 
-	// const positionY = scrollY === offsetY ? stuck : tagY;
-	// const opp = scrollY < offsetY && diffClampScrollY === stuck ? 1 : opacityY;
+	const positionY = cond(greaterThan(scrollY, offsetY), tagY, offsetY);
+	const opacity = cond(greaterThan(scrollY, offsetY), opacityY, 1);
 
 	return (
 		<Background>
@@ -69,9 +76,9 @@ const Explore = () => {
 				<Search handleSearch={handleSearchInit} />
 				<TagMenu
 					display={searchInit}
-					tagY={tagY}
+					tagY={positionY}
 					tagHeight={TAG_HEIGHT}
-					opacitY={opacityY}
+					opacitY={opacity}
 				/>
 
 				<FeedList
