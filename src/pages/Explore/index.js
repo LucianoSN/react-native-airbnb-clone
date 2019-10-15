@@ -15,7 +15,7 @@ import { experiences, adventures, wordsPlace } from '../../data/explore';
 
 import { Container, FeedList, AvoidHidden, Feed } from './styles';
 
-const { Extrapolate } = Animated;
+const { Extrapolate, call, block } = Animated;
 const TAG_HEIGHT = 85;
 
 const Explore = () => {
@@ -36,9 +36,28 @@ const Explore = () => {
 		extrapolate: Extrapolate.CLAMP,
 	});
 
+	const onScroll = Animated.event(
+		[
+			{
+				nativeEvent: { contentOffset: { y: scrollY } },
+			},
+		],
+		{ useNativeDriver: true }
+	);
+
 	const handleSearchInit = (init = false) => {
 		setSearchInit(init);
 	};
+
+	const debugScrollY = block([
+		call([scrollY], x => console.log('scroll: ', x[0])),
+		scrollY,
+	]);
+
+	const debugTagY = block([
+		call([tagY], x => console.log('tag: ', x[0])),
+		tagY,
+	]);
 
 	return (
 		<Background>
@@ -52,13 +71,9 @@ const Explore = () => {
 				/>
 
 				<FeedList
-					bounces={false}
+					bounces={true}
 					scrollEventThrottle={16}
-					onScroll={Animated.event([
-						{
-							nativeEvent: { contentOffset: { y: scrollY } },
-						},
-					])}
+					{...{ onScroll }}
 				>
 					<AvoidHidden>
 						<SearchResult display={searchInit} />
