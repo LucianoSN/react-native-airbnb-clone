@@ -6,6 +6,8 @@ export const Container = styled.View`
 	justify-content: center;
 	height: 80px;
 	z-index: 100;
+	background-color: ${Colors.bgColor};
+	box-shadow: 0 3px 6px rgba(130, 130, 130, 0.5);
 `;
 
 export const FindBox = styled.View`

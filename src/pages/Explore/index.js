@@ -23,6 +23,7 @@ const Explore = () => {
 
 	const scrollY = new Animated.Value(0);
 	const offsetY = new Animated.Value(0);
+	const offsetShadow = new Animated.Value(70);
 
 	const diffClampScrollY = Animated.diffClamp(scrollY, 0, TAG_HEIGHT);
 
@@ -36,6 +37,12 @@ const Explore = () => {
 		inputRange: [0, 30, TAG_HEIGHT],
 		outputRange: [1, 0.6, 0],
 		extrapolate: Extrapolate.CLAMP,
+	});
+
+	const shadow = Animated.interpolate(diffClampScrollY, {
+		inputRange: [0, offsetShadow],
+		outputRange: [0, 0.5],
+		extrapolate: 'clamp',
 	});
 
 	const onScroll = Animated.event(
@@ -52,7 +59,7 @@ const Explore = () => {
 	};
 
 	const debugTagY = block([
-		call([tagY, scrollY, diffClampScrollY, offsetY], x => {
+		call([tagY, scrollY, diffClampScrollY, offsetY, shadow], x => {
 			console.log(
 				'tagY:',
 				x[0],
@@ -60,8 +67,10 @@ const Explore = () => {
 				x[1],
 				'diffClamp:',
 				x[2],
-				'offsetY',
-				x[3]
+				'offsetY:',
+				x[3],
+				'shadow:',
+				x[4]
 			);
 		}),
 		cond(greaterThan(scrollY, offsetY), tagY, offsetY),
