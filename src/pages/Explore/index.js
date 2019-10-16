@@ -23,7 +23,7 @@ const Explore = () => {
 
 	const scrollY = new Animated.Value(0);
 	const offsetY = new Animated.Value(0);
-	const offsetShadow = new Animated.Value(70);
+	const offsetShadow = new Animated.Value(90);
 
 	const diffClampScrollY = Animated.diffClamp(scrollY, 0, TAG_HEIGHT);
 
@@ -34,15 +34,9 @@ const Explore = () => {
 	});
 
 	const opacityY = Animated.interpolate(diffClampScrollY, {
-		inputRange: [0, 30, TAG_HEIGHT],
-		outputRange: [1, 0.6, 0],
+		inputRange: [0, 20, TAG_HEIGHT],
+		outputRange: [1, 0.2, 0],
 		extrapolate: Extrapolate.CLAMP,
-	});
-
-	const shadow = Animated.interpolate(diffClampScrollY, {
-		inputRange: [0, offsetShadow],
-		outputRange: [0, 0.5],
-		extrapolate: 'clamp',
 	});
 
 	const onScroll = Animated.event(
@@ -57,6 +51,10 @@ const Explore = () => {
 	const handleSearchInit = (init = false) => {
 		setSearchInit(init);
 	};
+
+	const positionY = cond(greaterThan(scrollY, offsetY), tagY, offsetY);
+	const opacity = cond(greaterThan(scrollY, offsetY), opacityY, 1);
+	const shadow = cond(greaterThan(scrollY, offsetShadow), 0.2, 0);
 
 	const debugTagY = block([
 		call([tagY, scrollY, diffClampScrollY, offsetY, shadow], x => {
@@ -76,9 +74,6 @@ const Explore = () => {
 		cond(greaterThan(scrollY, offsetY), tagY, offsetY),
 	]);
 
-	const positionY = cond(greaterThan(scrollY, offsetY), tagY, offsetY);
-	const opacity = cond(greaterThan(scrollY, offsetY), opacityY, 1);
-
 	return (
 		<Background>
 			<Container>
@@ -88,6 +83,7 @@ const Explore = () => {
 						tagY={positionY}
 						tagHeight={TAG_HEIGHT}
 						opacitY={opacity}
+						shadow={shadow}
 					/>
 				</Search>
 

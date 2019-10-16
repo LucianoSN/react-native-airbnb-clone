@@ -14,7 +14,7 @@ import {
 	CancelText,
 } from './styles';
 
-const Search = ({ shadow, handleSearch, children }) => {
+const Search = ({ handleSearch, children }) => {
 	const searchRef = useRef();
 
 	const [searchDisplay, setSearchDisplay] = useState(false);
@@ -37,7 +37,7 @@ const Search = ({ shadow, handleSearch, children }) => {
 	const handleSubmit = () => {};
 
 	return (
-		<Container shadowValue={shadow}>
+		<Container>
 			<FindBox>
 				<Find>
 					<IconBox display={!searchDisplay}>

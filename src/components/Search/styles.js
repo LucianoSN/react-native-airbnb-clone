@@ -4,12 +4,8 @@ import Colors from '../../styles/colors';
 export const Container = styled.View`
 	align-items: center;
 	justify-content: center;
-	height: 80px;
+	height: 85px;
 	z-index: 100;
-	background-color: ${Colors.bgColor};
-	/*
-	box-shadow: 0 3px 6px rgba(130, 130, 130, 0.5);
-    */
 `;
 
 export const FindBox = styled.View`
@@ -27,7 +23,7 @@ export const Find = styled.View`
 	align-self: center;
 	width: 100%;
 
-	margin: 5px 0 5px 0;
+	margin-top: 10px;
 	padding: 5px;
 
 	background-color: ${Colors.white};

@@ -6,9 +6,10 @@ import Colors from '../../styles/colors.js';
 export const Container = styled(Animated.View)`
 	flex-direction: row;
 	align-items: flex-end;
+	z-index: 50;
 
 	position: absolute;
-	top: 40px;
+	top: 30px;
 
 	width: 100%;
 	padding-left: 20px;
@@ -17,8 +18,7 @@ export const Container = styled(Animated.View)`
 	height: ${props => props.tagHeight};
 
 	background-color: ${Colors.bgColor};
-
-	z-index: 50;
+	box-shadow: 0 6px 3px rgb(130, 130, 130);
 `;
 
 export const Button = styled(RectButton)`
@@ -39,4 +39,12 @@ export const Button = styled(RectButton)`
 export const Text = styled.Text`
 	font-weight: 600;
 	color: ${Colors.subTitle};
+`;
+
+export const BoxShadow = styled.View`
+	margin-top: 7px;
+	height: 20px;
+	width: 100%;
+	background-color: ${Colors.bgColor};
+	box-shadow: 0 6px 3px rgba(130, 130, 130, 0.2);
 `;
