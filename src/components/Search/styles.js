@@ -7,7 +7,9 @@ export const Container = styled.View`
 	height: 80px;
 	z-index: 100;
 	background-color: ${Colors.bgColor};
+	/*
 	box-shadow: 0 3px 6px rgba(130, 130, 130, 0.5);
+    */
 `;
 
 export const FindBox = styled.View`
@@ -15,6 +17,7 @@ export const FindBox = styled.View`
 	justify-content: space-between;
 	align-items: center;
 	width: 90%;
+	z-index: 70;
 `;
 
 export const Find = styled.View`

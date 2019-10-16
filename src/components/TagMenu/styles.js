@@ -8,7 +8,7 @@ export const Container = styled(Animated.View)`
 	align-items: flex-end;
 
 	position: absolute;
-	top: 60px;
+	top: 40px;
 
 	width: 100%;
 	padding-left: 20px;
@@ -16,8 +16,9 @@ export const Container = styled(Animated.View)`
 	display: ${props => (!props.display ? 'flex' : 'none')};
 	height: ${props => props.tagHeight};
 
-	z-index: 50;
 	background-color: ${Colors.bgColor};
+
+	z-index: 50;
 `;
 
 export const Button = styled(RectButton)`

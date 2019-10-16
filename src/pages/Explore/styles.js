@@ -15,6 +15,7 @@ export const FeedList = styled(Animated.ScrollView).attrs({
 	showsVerticalScrollIndicator: false,
 })`
 	padding-top: 45px;
+	z-index: 20;
 `;
 
 export const Feed = styled.View`

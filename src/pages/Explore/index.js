@@ -82,13 +82,14 @@ const Explore = () => {
 	return (
 		<Background>
 			<Container>
-				<Search handleSearch={handleSearchInit} />
-				<TagMenu
-					display={searchInit}
-					tagY={positionY}
-					tagHeight={TAG_HEIGHT}
-					opacitY={opacity}
-				/>
+				<Search handleSearch={handleSearchInit}>
+					<TagMenu
+						display={searchInit}
+						tagY={positionY}
+						tagHeight={TAG_HEIGHT}
+						opacitY={opacity}
+					/>
+				</Search>
 
 				<FeedList
 					bounces={true}

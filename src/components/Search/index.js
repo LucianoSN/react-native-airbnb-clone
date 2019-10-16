@@ -14,7 +14,7 @@ import {
 	CancelText,
 } from './styles';
 
-const Search = ({ shadow, handleSearch }) => {
+const Search = ({ shadow, handleSearch, children }) => {
 	const searchRef = useRef();
 
 	const [searchDisplay, setSearchDisplay] = useState(false);
@@ -58,6 +58,8 @@ const Search = ({ shadow, handleSearch }) => {
 					<CancelText>Cancelar</CancelText>
 				</CancelLink>
 			</FindBox>
+
+			{children}
 		</Container>
 	);
 };
