@@ -20,8 +20,8 @@ const TAG_HEIGHT = 85;
 
 const Explore = () => {
 	const [searchInit, setSearchInit] = useState(false);
+	const [scrollY, setScrollY] = useState(new Animated.Value(0));
 
-	const scrollY = new Animated.Value(0);
 	const offsetY = new Animated.Value(0);
 	const offsetShadow = new Animated.Value(90);
 
