@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Animated from 'react-native-reanimated';
 import Icon from 'react-native-vector-icons/AntDesign';
 
