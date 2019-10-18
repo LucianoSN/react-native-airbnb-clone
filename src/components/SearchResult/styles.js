@@ -5,6 +5,10 @@ export const Container = styled.View`
 	flex: 1;
 	padding: 10px 20px;
 	display: ${props => (props.display ? 'flex' : 'none')};
+	background-color: ${Colors.bgColor};
+	position: relative;
+
+	z-index: 30;
 `;
 
 export const Near = styled.View`
