@@ -21,6 +21,10 @@ export const Container = styled(Animated.View)`
 	box-shadow: 0 6px 3px rgb(130, 130, 130);
 `;
 
+export const ButtonGroup = styled(Animated.View)`
+	flex-direction: row;
+`;
+
 export const Button = styled(RectButton)`
 	background: transparent;
 	min-height: 20px;
@@ -39,12 +43,4 @@ export const Button = styled(RectButton)`
 export const Text = styled.Text`
 	font-weight: 600;
 	color: ${Colors.subTitle};
-`;
-
-export const BoxShadow = styled.View`
-	margin-top: 7px;
-	height: 20px;
-	width: 100%;
-	background-color: ${Colors.bgColor};
-	box-shadow: 0 6px 3px rgba(130, 130, 130, 0.2);
 `;

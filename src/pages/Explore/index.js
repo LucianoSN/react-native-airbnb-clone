@@ -16,14 +16,14 @@ import { experiences, adventures, wordsPlace } from '../../data/explore';
 import { Container, FeedList, AvoidHidden, Feed } from './styles';
 
 const { Extrapolate, call, block, cond, greaterThan } = Animated;
-const TAG_HEIGHT = 85;
+const TAG_HEIGHT = 95;
 
 const Explore = () => {
 	const [searchInit, setSearchInit] = useState(false);
 	const [scrollY, setScrollY] = useState(new Animated.Value(0));
 
 	const offsetY = new Animated.Value(0);
-	const offsetShadow = new Animated.Value(90);
+	const offsetShadow = new Animated.Value(120);
 
 	const diffClampScrollY = Animated.diffClamp(scrollY, 0, TAG_HEIGHT);
 
@@ -33,9 +33,15 @@ const Explore = () => {
 		extrapolate: 'clamp',
 	});
 
+	const tagYC = Animated.interpolate(diffClampScrollY, {
+		inputRange: [0, TAG_HEIGHT],
+		outputRange: [0, -(TAG_HEIGHT - 55)],
+		extrapolate: 'clamp',
+	});
+
 	const opacityY = Animated.interpolate(diffClampScrollY, {
-		inputRange: [0, 20, TAG_HEIGHT],
-		outputRange: [1, 0.2, 0],
+		inputRange: [0, 5, TAG_HEIGHT],
+		outputRange: [1, 0.1, 0],
 		extrapolate: Extrapolate.CLAMP,
 	});
 
@@ -53,6 +59,12 @@ const Explore = () => {
 	};
 
 	const positionY = cond(greaterThan(scrollY, offsetY), tagY, offsetY);
+	const positionYContainer = cond(
+		greaterThan(scrollY, offsetY),
+		tagYC,
+		offsetY
+	);
+
 	const opacity = cond(greaterThan(scrollY, offsetY), opacityY, 1);
 	const shadow = cond(greaterThan(scrollY, offsetShadow), 0.2, 0);
 
@@ -81,6 +93,7 @@ const Explore = () => {
 					<TagMenu
 						display={searchInit}
 						tagY={positionY}
+						tagYContainer={positionYContainer}
 						tagHeight={TAG_HEIGHT}
 						opacitY={opacity}
 						shadow={shadow}

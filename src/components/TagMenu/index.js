@@ -1,26 +1,39 @@
 import React from 'react';
 
-import { Container, Button, Text, BoxShadow } from './styles';
+import { Container, ButtonGroup, Button, Text } from './styles';
 
-const TagMenu = ({ display, tagY, tagHeight, opacitY, shadow }) => {
+const TagMenu = ({
+	display,
+	tagY,
+	tagYContainer,
+	tagHeight,
+	opacitY,
+	shadow,
+}) => {
 	return (
 		<>
 			<Container
 				style={[
-					{ transform: [{ translateY: tagY }] },
-					{ opacity: opacitY, shadowOpacity: shadow },
+					{ transform: [{ translateY: tagYContainer }] },
+					{ shadowOpacity: shadow },
 				]}
 				display={display}
 				tagHeight={tagHeight}
 			>
-				<Button>
-					<Text>Datas</Text>
-				</Button>
-				<Button>
-					<Text>Hóspedes</Text>
-				</Button>
+				<ButtonGroup
+					style={[
+						{ transform: [{ translateY: tagY }] },
+						{ opacity: opacitY },
+					]}
+				>
+					<Button>
+						<Text>Datas</Text>
+					</Button>
+					<Button>
+						<Text>Hóspedes</Text>
+					</Button>
+				</ButtonGroup>
 			</Container>
-			<BoxShadow />
 		</>
 	);
 };
