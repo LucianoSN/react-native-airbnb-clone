@@ -59,6 +59,7 @@ const Explore = () => {
 	};
 
 	const positionY = cond(greaterThan(scrollY, offsetY), tagY, offsetY);
+
 	const positionYContainer = cond(
 		greaterThan(scrollY, offsetY),
 		tagYC,
@@ -108,7 +109,7 @@ const Explore = () => {
 					<AvoidHidden>
 						<SearchResult display={searchInit} />
 					</AvoidHidden>
-					<Feed display={searchInit}>
+					<Feed>
 						<HelpYouFind />
 						<KeepExplore />
 						<Sections data={experiences} />
