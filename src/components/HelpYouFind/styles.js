@@ -36,6 +36,7 @@ export const Category = styled.View`
 	border-color: ${Colors.lineBorder};
 
 	box-shadow: 0 0 2px rgba(130, 130, 130, 0.2);
+	elevation: 2;
 `;
 
 export const CategoryImage = styled.View`

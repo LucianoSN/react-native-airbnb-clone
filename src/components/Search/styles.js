@@ -30,6 +30,7 @@ export const Find = styled.View`
 	border-radius: 4px;
 
 	box-shadow: 0 0 8px rgba(130, 130, 130, 0.3);
+	elevation: 2;
 `;
 
 export const IconBox = styled.View`

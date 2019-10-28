@@ -1,4 +1,4 @@
-import { Platform } from 'react-native';
+import { Platform, StatusBar } from 'react-native';
 import styled from 'styled-components';
 import Animated from 'react-native-reanimated';
 
@@ -6,6 +6,7 @@ import Colors from '../../styles/colors';
 
 export const Container = styled.SafeAreaView`
 	flex: 1;
+	padding-top: ${Platform.OS === 'ios' ? 0 : StatusBar.currentHeight};
 `;
 
 export const AvoidHidden = styled.KeyboardAvoidingView.attrs({
